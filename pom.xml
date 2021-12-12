@@ -14,7 +14,7 @@
         <kotlintest.version>3.4.2</kotlintest.version>
         <junit.version>5.2.0</junit.version>
         <bouncycastle.version>1.61</bouncycastle.version>
-        <jitsi.utils.version>1.0-36-ge6eda64</jitsi.utils.version>
+        <jitsi.utils.version>1.0-99-gf60ac15</jitsi.utils.version>
         <ktlint.skip>false</ktlint.skip>
     </properties>
     <dependencies>
@@ -226,8 +226,7 @@
                         <configuration>
                             <skip>${ktlint.skip}</skip>
                             <target name="ktlint">
-                                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true"
-                                    classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
+                                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true" classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                                     <arg value="src/**/*.kt"/>
                                     <!-- to generate report in checkstyle format prepend following args: -->
                                     <!-- 
@@ -244,8 +243,7 @@
                         <id>ktlint-format</id>
                         <configuration>
                             <target name="ktlint">
-                                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true"
-                                    classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
+                                <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true" classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                                     <arg value="-F"/>
                                     <arg value="src/**/*.kt"/>
                                 </java>
