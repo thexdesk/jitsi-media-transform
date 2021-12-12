@@ -229,11 +229,11 @@
                                 <java taskname="ktlint" dir="${basedir}" fork="true" failonerror="true" classpathref="maven.plugin.classpath" classname="com.pinterest.ktlint.Main">
                                     <arg value="src/**/*.kt"/>
                                     <!-- to generate report in checkstyle format prepend following args: -->
-                                    <!-- 
+                                    <!--
                                     <arg value="[dash][dash]reporter=plain"/>
                                     <arg value="[dash][dash]reporter=checkstyle,output=${project.build.directory}/ktlint.xml"/>
                                     -->
-                                    <!-- see https://github.com/shyiko/ktlint#usage for more -->                    
+                                    <!-- see https://github.com/shyiko/ktlint#usage for more -->
                                 </java>
                             </target>
                         </configuration>
